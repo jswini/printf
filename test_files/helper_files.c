@@ -12,7 +12,9 @@ int print_char(char c, int n)
 }
 
 /**
- * print_percent
+ * print_percent - prints a %
+ *
+ * Return: number of characters printed
  */
 int print_percent(void)
 {
@@ -21,7 +23,7 @@ int print_percent(void)
 }
 
 
-/*
+/**
  * print_string
  * @array: array of characters.
  * Return: length of array 
