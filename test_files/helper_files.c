@@ -2,7 +2,7 @@
 /**
  * print_char - prints out a character
  * @c: character to print
- *
+ * @n: number of characters submittted
  * Return: void
  */
 int print_char(char c, int n)
@@ -19,24 +19,23 @@ int print_char(char c, int n)
 int print_percent(void)
 {
 	_putchar('%');
-	return(1);
+	return (1);
+
 }
 
 
 /**
- * print_string
+ * print_string - print string
  * @array: array of characters.
- * Return: length of array 
+ * Return: length of array
  */
 int print_string(char *array)
 {
-        int i;
+	int i;
 
-	for(i = 0; array[i] != NULL; i++)
-                putchar(array[i]);
-
-	return _strlen(array);
-				  
+	for (i = 0; array[i] != NULL; i++)
+		putchar(array[i]);
+	return (_strlen(array));
 }
 
 
@@ -54,23 +53,22 @@ int print_int(int num)
 
 	test = num;
 	for (count = 0; test > 0; count++)
-        {
-                test = test / 10;
-        }
-     
+	{
+		test = test / 10;
+	}
 	array = malloc(sizeof(char) * count + 1);
-        for (i = count - 1; num > 0; i--)
-        {
-                result = num % 10;
-                num = num / 10;
-                array[i] = result + '0';
-        }
-    
-        array[count] = NULL;
-        print_string(array);
+	for (i = count - 1; num > 0; i--)
+	{
+		result = num % 10;
+		num = num / 10;
+		array[i] = result + '0';
+	}
 
-	free (array);
-	return(count);
+	array[count] = NULL;
+	print_string(array);
+
+	free(array);
+	return (count);
 
 }
 
@@ -90,4 +88,5 @@ int _strlen(char *s)
 	for (count = 0; *(s + count) != '\0'; count++)
 	{}
 	return (count);
-}i
+
+}
