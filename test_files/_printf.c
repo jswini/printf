@@ -1,6 +1,8 @@
 #include "holberton.h"
 /**
- *
+ * _printf - prints characters
+ * @format: determines how to output
+ * Return: length
  */
 int _printf(const char *format, ...)
 {
@@ -27,11 +29,12 @@ int _printf(const char *format, ...)
  *
  * Return: format specifier function pointer
  */
-int (*find_format(char *spec))(va_list ap, int length)
+int (find_format(__attribute__((unused))char *pointer))
 {
-	format_t type[] =	{
-		{"c", print_char},
-		{"s", print_str},
+	format_t type[] =	
+	{
+	/*	{"c", print_char},*/
+		{"s", print_string},
 		{"%", print_percent},
 		{"d", print_int},
 		{"i", print_int},
@@ -42,8 +45,9 @@ int (*find_format(char *spec))(va_list ap, int length)
 	for (index = 0; index < 5; index++)
 	{
 		if (type[index].format != NULL)
-			return (type[index].f);
+			return (type[index].f());
 	}
+	
 
-	return (NULL);
+	return ('\0');
 }
