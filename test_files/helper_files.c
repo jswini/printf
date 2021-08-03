@@ -5,10 +5,10 @@
  * @n: number of characters submittted
  * Return: void
  */
-int print_char(char c, int n)
+int print_char(char c)
 {
 	_putchar(c);
-	return (n);
+	return (1);
 }
 
 /**
@@ -33,7 +33,7 @@ int print_string(char *array)
 {
 	int i;
 
-	for (i = 0; array[i] != NULL; i++)
+	for (i = 0; array[i] != '\0'; i++)
 		putchar(array[i]);
 	return (_strlen(array));
 }
@@ -64,7 +64,7 @@ int print_int(int num)
 		array[i] = result + '0';
 	}
 
-	array[count] = NULL;
+	array[count] = '\0';
 	print_string(array);
 
 	free(array);
