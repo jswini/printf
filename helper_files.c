@@ -1,8 +1,7 @@
 #include "holberton.h"
 /**
  * print_char - prints out a character
- * @c: character to print
- * @n: number of characters submittted
+ * @ap: character to print
  * Return: void
  */
 int print_char(va_list ap)
@@ -16,6 +15,7 @@ int print_char(va_list ap)
 
 /**
  * print_percent - prints a %
+ * @ap: character to print
  *
  * Return: number of characters printed
  */
@@ -30,7 +30,7 @@ int print_percent(va_list ap)
 
 /**
  * print_string - print string
- * @array: array of characters.
+ * @ap: character to print
  * Return: length of array
  */
 
@@ -47,7 +47,7 @@ int print_string(va_list ap)
 
 /**
  * print_int - prints out integers
- * @num: number to print
+ * @ap: character to print
  * Return: number of characters printed
  */
 int print_int(va_list ap)

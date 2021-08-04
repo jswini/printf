@@ -36,14 +36,13 @@ int _printf(const char *format, ...)
 
 /**
  * find_format - determines which helper function to use
- * @f: format specifier
- *
+ * @ptr: format specifier
+ * @ap: string or char to print
  * Return: format specifier function pointer
  */
 int find_format(char ptr, va_list ap)
 {
-	format_t type[] =
-		{
+	format_t type[] = {
 			{"c", print_char},
 			{"s", print_string},
 			{"%", print_percent},
